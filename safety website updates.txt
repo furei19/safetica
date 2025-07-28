@@ -1,0 +1,13 @@
+- A3 Printable
+- Standard Banner
+- Safetica (Site Name)
+- Remove color changing functionality
+- Checklist
+- Forms
+
+July 25 2025
+- remove blog
+- sign builder bg	
+- Add subtitle and font size slider
+- donation popup
+- footer affiliate links

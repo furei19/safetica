@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div class="navbar">
+            <img class="logo" src="assets/logo.png" alt="">
+            <div class="navbar_sub">
+                <div class="selected">
+                    <img src="assets/house-solid.svg" alt="">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/download-solid.svg" alt="">
+                    <a href="freedownload.html">Downloads</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/gem-solid.svg" alt="">
+                    <a>Templates</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/video-solid.svg" alt="">
+                    <a>Videos</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/circle-info-solid.svg" alt="">
+                    <a href="about.html" >About</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/phone-solid.svg" alt="">
+                    <a>Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="cover">
+            <img src="assets/cover.png" alt="">
+            <div class="cover_icons">
+                <img src="assets/wpforms-brands-solid.svg" alt="">
+                <h1>Downloadable Forms</h1>
+            </div>
+            <div class="cover_icons">
+                <img src="assets/ruler-solid-full.svg" alt="">
+                <h1>Metric Conversion</h1>
+            </div>
+            <div class="cover_icons">
+                <img src="assets/image-solid.svg" alt="">
+                <h1>Image Conversion</h1>
+            </div>
+        </div>
+        <h1 class="sign_editor_header">Sign Builder</h1>
+        <div class="editor">
+            <div class="left_column">
+                <div class="selector_panel">
+                    <div class="left_selector_panel">
+                        <p class="selector_button selected" data-category="sign_template">Sign Template</p>
+                        <p class="selector_button" data-category="symbol">Symbol</p>
+                    </div>
+                    <div class="right_selector_panel">
+                        <div class="image_panel" data-category="sign_template">
+                                <div class="category_row">
+                                <p class="selector_header">OSHA</p>
+                                <p class="selector_header">ANSI</p>
+                                <p class="selector_header">USACE</p>
+                            </div>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/danger_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/warning_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                        </div>
+                        <div class="image_panel" data-category="symbol">
+                            <div class="category_row">
+                                <p class="selector_header">You can only use symbols on ANSI & USACE Signs</p>
+                            </div>
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame and circle.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame.jfif" alt="">    
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exploding_bomb.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exclamation_mark.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/environment.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/corrosion.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/skull and crossbone.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/health hazard.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/gas cylinder.jfif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_column">
+                <div id="sign">
+                    <img id="editorPictogram" src="" alt="No Image Selected" />
+                    <div class="editor_type">
+                        <div class="ansi_editor">
+                            <div class="symbol_side">
+                                <img id="ansi_symbol" src="" alt="No Symbol Selected">
+                            </div>
+                            
+                            <div class="ansi-vertical-line"></div>
+                            
+                            <div class="text_side">
+                                <p class="signTextSubtitle">Subtitle</p>
+                                <p class="signText">Your custom signal word</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor_type">
+                        <div class="osha_editor">
+                            <p class="signText">Your custom signal word</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <div id="edit_button" onclick="show_editor()">
+                        <img src="assets/wrench-solid.svg" alt="">
+                    </div>
+                    <input type="text" id="inputText" placeholder="Enter Safety Message" />
+                    <input type="text" id="inputTextSubtitle" placeholder="Enter Subtitle" />
+                </div>
+                
+                <div class="editor_control">
+                    <div style="display: flex; gap: 10px;">
+                        <!-- Font Size Control -->
+                        <div class="font-size-control">
+                            <label for="fontSizeSlider">
+                                <img src="assets/font-solid.svg" alt="Font Size Icon" class="icon" />
+                                Font Size
+                            </label>
+                            <input type="range" id="fontSizeSlider" min="12" max="64" value="20" step="1" />
+                            <span id="fontSizeValue">20px</span>
+                        </div>
+
+                        <!-- Subtitle Font Size Control -->
+                        <div class="font-size-control">
+                            <label for="subFontSizeSlider">
+                                <img src="assets/font-solid.svg" alt="Font Size Icon" class="icon" />
+                                Subtitle Font Size
+                            </label>
+                            <input type="range" id="subFontSizeSlider" min="12" max="44" value="20" step="1" />
+                            <span id="subFontSizeValue">20px</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <!-- Text Position Control -->
+                        <div class="font-size-control">
+                            <label for="textPositionSlider">
+                                <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
+                                Text Position
+                            </label>
+                            <input type="range" id="textPositionSlider" min="-140" max="135" value="0" step="1" />
+                            <span id="textPositionValue">0px</span>
+                        </div>
+
+                        <!--Subtitle Text Position Control -->                    
+                        <div class="font-size-control">
+                            <label for="subTextPositionSlider">
+                                <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
+                                Subtitle Position
+                            </label>
+                            <input type="range" id="subTextPositionSlider" min="-140" max="135" value="0" step="1" />
+                            <span id="subTextPositionValue">0px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download_button">
+                    <img class="download_icon" src="assets/download-solid.svg" alt="">
+                    <span class="button_text" onclick="downloadSign()">Download</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Safetica. All rights reserved.</p>
+        </div>
+   </center>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="custom.js"></script>
+
+</html>

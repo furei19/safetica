@@ -9,6 +9,7 @@ body {
   user-select: none;
   margin: 0px;
   padding: 0px;
+  width: 100%;
 }
 
 .cover {
@@ -50,7 +51,7 @@ body {
 .selected {
   display: inline-block;
   margin-right: 10px;
-  width: 100px;
+  width: 130px;
   padding: 10px;
   border-radius: 10px;
 }
@@ -234,7 +235,7 @@ body {
   width: 100%;
   height: 32px;
   padding: 5px;
-  display: inline-block;
+  display:inline-block
 }
 
 #inputTextSubtitle {
@@ -243,7 +244,7 @@ body {
   width: 100%;
   height: 32px;
   padding: 5px;
-  display: inline-block;
+  display:inline-block;
 }
 
 #edit_button,
@@ -265,11 +266,14 @@ body {
 #sign {
   position: relative;
   background-color: white;
-  border: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 2px solid black;
+  border-top: 4px solid black;
   align-items: center;
   margin-bottom: 20px;
   aspect-ratio: 420 / 297;
-  width: 100%;
+  width: 600px;
   max-width: 1123px;
   overflow: hidden;
   max-width: 740px;
@@ -282,13 +286,18 @@ body {
 
 .osha_editor {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 11%;
   width: 100%;
-  margin-left: 10px;
-  height: 100%;            
+  height: 100%;
   display: flex;
-  align-items: center;     
+  margin-top: 75px;
+  align-items: center;
+  justify-content: center;
+}
+
+.osha_text_side {
+  width: 90%;
+  height: 354px;
 }
 
 .ansi_editor,
@@ -306,11 +315,10 @@ body {
   align-items: center;
 }
 
-.symbol_side, .text_side {
+.symbol_side,
+.text_side {
   width: 50%;
-  height: 100%;
-  display: flex;
-  background-color: white;
+  height: 454px;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -325,7 +333,7 @@ body {
 
 .ansi-vertical-line {
   width: 2px;
-  height: 100%;
+  height: 454px;
   background-color: black;
   flex-shrink: 0;      
 }
@@ -334,7 +342,6 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  margin-top: -120px;
 }
 
 .signText {
@@ -345,7 +352,6 @@ body {
   max-width: 100%;
   text-align: center;
   margin: 0;
-  margin-top: -100px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -358,7 +364,6 @@ body {
   max-width: 100%;
   text-align: center;
   margin: 0;
-  margin-top: -100px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -400,6 +405,7 @@ body {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  width: 100%;
 }
 
 #subFontSizeSlider,
@@ -449,4 +455,50 @@ body {
   border-radius: 50%;
   background: white;
   cursor: pointer;
+}
+
+.affiliate_section {
+  height: 550px;
+  width: 100%;
+  background-color: #1c78e3;
+}
+
+.affiliate_section h1 {
+  color: white;
+  padding-top: 50px;
+}
+
+.affiliate_icons {
+  display: inline-block;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding: 0;
+  width: 15%;
+}
+
+.affiliate_icons p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.affiliate_section img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+#popup_download {
+  width: 40%;
+  height: 40%;
+  background-color: #1c78e3;
+  border-radius: 10px;
+  z-index: 1000;
+  position: fixed;
+  display: none;
+  top: 35%;
+  left: 30%;
+  color: white;
+}
+
+.about_content img {
+  width: 90%;
 }

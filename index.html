@@ -18,11 +18,11 @@
                 </div>
                 <div class="button_container">
                     <img src="assets/download-solid.svg" alt="">
-                    <a href="freedownload.html">Downloads</a>
+                    <a href="freedownload.html">Free Downloads</a>
                 </div>
                 <div class="button_container">
-                    <img src="assets/gem-solid.svg" alt="">
-                    <a>Templates</a>
+                    <img src="assets/cart-shopping-solid.svg" alt="">
+                    <a>Shop</a>
                 </div>
                 <div class="button_container">
                     <img src="assets/video-solid.svg" alt="">
@@ -54,6 +54,15 @@
             </div>
         </div>
         <h1 class="sign_editor_header">Sign Builder</h1>
+        </div>
+        
+        <div id="popup_download">
+            <h1>Hello World</h1>
+            <p>Your download has started.</p>
+            <p>💖 Enjoying our work? If you'd like to support us, please consider making a donation.</p>
+            <p>We’d also love your feedback—take a quick survey to help us improve!</p>
+        </div>
+
         <div class="editor">
             <div class="left_column">
                 <div class="selector_panel">
@@ -70,13 +79,19 @@
                             </div>
                             <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
                             <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/danger_ansi.jfif" alt="">
-                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/danger_usace.jfif" alt="">
                             <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
                             <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/warning_ansi.jfif" alt="">
-                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/warning_usace.jfif" alt="">
                             <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
                             <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution_ansi.jfif" alt="">
-                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution_usace.jfif" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/safety.jfif" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/notice.jfif" alt="">
                         </div>
                         <div class="image_panel" data-category="symbol">
                             <div class="category_row">
@@ -107,22 +122,23 @@
                             <div class="ansi-vertical-line"></div>
                             
                             <div class="text_side">
-                                <p class="signTextSubtitle">Subtitle</p>
                                 <p class="signText">Your custom signal word</p>
+                                <p class="signTextSubtitle">Subtitle</p>    
                             </div>
                         </div>
                     </div>
                     <div class="editor_type">
                         <div class="osha_editor">
-                            <p class="signText">Your custom signal word</p>
+                            <div class="no_display"></div>
+                            <div class="osha_text_side">
+                                <p class="signText">Your custom signal word</p>
+                                <p class="signTextSubtitle">Subtitle</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div style="display: flex; gap: 10px;">
-                    <div id="edit_button" onclick="show_editor()">
-                        <img src="assets/wrench-solid.svg" alt="">
-                    </div>
                     <input type="text" id="inputText" placeholder="Enter Safety Message" />
                     <input type="text" id="inputTextSubtitle" placeholder="Enter Subtitle" />
                 </div>
@@ -157,7 +173,7 @@
                                 <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
                                 Text Position
                             </label>
-                            <input type="range" id="textPositionSlider" min="-140" max="135" value="0" step="1" />
+                            <input type="range" id="textPositionSlider" min="-20" max="135" value="0" step="1" />
                             <span id="textPositionValue">0px</span>
                         </div>
 
@@ -167,7 +183,7 @@
                                 <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
                                 Subtitle Position
                             </label>
-                            <input type="range" id="subTextPositionSlider" min="-140" max="135" value="0" step="1" />
+                            <input type="range" id="subTextPositionSlider" min="-20" max="200" value="0" step="1" />
                             <span id="subTextPositionValue">0px</span>
                         </div>
                     </div>
@@ -177,6 +193,26 @@
                     <img class="download_icon" src="assets/download-solid.svg" alt="">
                     <span class="button_text" onclick="downloadSign()">Download</span>
                 </div>
+            </div>
+        </div>
+
+        <div class="affiliate_section">
+            <h1>Affiliate</h1>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond.jfif" alt="">
+                <p>Connecting Ideas. Building Futures.</p>  
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_academy.jfif" alt="">    
+                <p>Empowering Learners. Shaping Innovators</p>
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_lab.jfif" alt="">    
+                <p>Experiment. Innovate. Transform.</p>
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_studio.jfif" alt="">    
+                <p>Turning Ideas into Digital Products</p>
             </div>
         </div>
 

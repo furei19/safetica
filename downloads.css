@@ -1,0 +1,11 @@
+.main_downloads_content {
+    width: 90%;
+}
+
+.downloadables_cards {
+    width: 15%;
+    height: 300px;
+    display: inline-block;
+    border: 2px solid black;
+    margin-left: 5%;
+}

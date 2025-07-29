@@ -46,6 +46,8 @@ async function downloadSign() {
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
   pdf.save("safety-sign.pdf");
+
+  document.getElementById("popup_download").style.display = "block";
 }
 
 window.addEventListener('DOMContentLoaded', () => {

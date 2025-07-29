@@ -19,6 +19,10 @@ body {
   padding: 0;
 }
 
+.cover img {
+  width: 100%;
+}
+
 .cover_icons {
   display: inline-block;
   margin-left: 5%;

@@ -157,3 +157,6 @@ subTextPositionSlider.addEventListener('input', () => {
   });
 });
 
+function close_popup() {
+  document.getElementById("popup_download").style.display = "none";
+}

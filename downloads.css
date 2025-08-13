@@ -1,0 +1,56 @@
+.main_downloads_cover {
+    background-image: url(assets/documentcovers.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main_downloads_content {
+    width: 80%;
+    display: grid;
+    padding: 40px 0 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.downloadables_cards {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: white;
+    background-color: #1c78e3;
+    border: 2px solid #1c78e3;
+}
+
+.downloadables_cards p{
+    padding: 20px;
+}
+
+.downloadables_cards h1,
+.downloadable_icons img {
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+.downloadable_icons {
+    width: 6%;
+    filter: invert(1);
+}
+
+.card_cover img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.downloadables_cards {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.downloadables_cards:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px #1457a2;
+}

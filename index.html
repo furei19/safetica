@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="downloads.css">
+    <script src="index.js"></script>
+    <title>Safetica</title>
+</head>
+<body>
+    <center>
+        <div class="navbar">
+            <img class="logo" src="assets/logo.png" alt="">
+            <div class="navbar_sub">
+                <div class="selected">
+                    <img src="assets/house-solid.svg" alt="">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/wrench-solid.svg" alt="">
+                    <a href="freedownload.html">Tools</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/cart-shopping-solid.svg" alt="">
+                    <a>Shop</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/video-solid.svg" alt="">
+                    <a>Training Videos</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/circle-info-solid.svg" alt="">
+                    <a href="about.html" >About</a>
+                </div>
+                <div class="button_container">
+                    <img src="assets/phone-solid.svg" alt="">
+                    <a>Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="cover">
+            <img src="assets/cover.png" alt="">
+        </div>
+        <h1 class="sign_editor_header">Free Downloadable Documents</h1>
+        </div>
+        <div class="main_downloads_cover">
+            <div class="main_downloads_content">
+                <a href="underconstruction.html">
+                    <div class="downloadables_cards">
+                    <img class="downloadable_icons" src="assets/wpforms-brands-solid.svg" alt="">
+                    <h1>Forms</h1>
+                    <div class="card_cover">
+                        <img src="assets/clipboard_constructionworker.jpg" alt="">
+                    </div>
+                    <p>Ready-to-use templates to streamline your documentation process. Ideal for quick data collection and standardized reporting.</p>
+                </div>
+                </a>
+                <a href="inspections.html">
+                    <div class="downloadables_cards">
+                        <img class="downloadable_icons" src="assets/magnifying-glass-solid-full.svg" alt="">
+                        <h1>Inspection</h1>
+                        <div class="card_cover">
+                            <img src="assets/safety officer doing inspection of a construction site (1).jpg" alt="">
+                        </div>
+                        <p>Professional inspection checklists for thorough evaluations. Use for safety checks, maintenance reviews, and audits.</p>
+                    </div>
+                </a>
+                <a href="underconstruction.html">
+                    
+                <div class="downloadables_cards">
+                    <img class="downloadable_icons" src="assets/book-solid.svg" alt="">
+                    <h1>Guides</h1>
+                    <div class="card_cover">
+                        <img src="assets/guide_card.png" alt="">
+                    </div>
+                    <p>Helpful guides offering instructions, best practices, and expert tips. Great for onboarding, training, or process improvement.</p>
+                </div>
+                </a>
+                <a href="underconstruction.html">
+                    <div class="downloadables_cards">
+                    <img class="downloadable_icons" src="assets/black-video-solid.svg" alt="">
+                    <h1>Training Videos</h1>
+                    <div class="card_cover">
+                        <img src="assets/hazardcard.gif" alt="">
+                    </div>
+                    <p>Videos designed to help you learn essential procedures, tools, and best practices. Ideal for onboarding, upskilling, and ongoing staff development.</p>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <h1 class="sign_editor_header">Sign Builder</h1>
+        
+        <div id="popup_download">
+            <h1 class="popup_header">Your download has started.</h1>
+            <p class="popup_paragraph">Thank you for choosing us! 💖💖</p>
+            <p>We’re actively working on improving our website to serve you better.
+                If you have any feedback or suggestions, feel free to message us — we’d love to hear from you!</p>
+            <p>Would you like to support our work? Donations are welcome and greatly appreciated.</p>
+            <p class="popup_buttons">Survey</p>
+            <p class="popup_buttons">Donate</p>
+            <p class="popup_buttons" onclick="close_popup()">Close</p>
+        </div>
+        
+        <div class="editor">
+            <div class="editor_spacers"></div>
+            <div class="left_column">
+                <div class="selector_panel">
+                    <div class="left_selector_panel">
+                        <p class="selector_button selected" data-category="sign_template">Sign Template</p>
+                        <h3>Symbol</h3>
+                        <p class="selector_button" data-category="fire">Fire</p>
+                        <p class="selector_button" data-category="hazard_identification">Hazard Identification</p>
+                        <p class="selector_button" data-category="mandatory">Mandatory</p>
+                        <p class="selector_button" data-category="prohibition">Prohibition</p>
+                        <p class="selector_button" data-category="safe_conditions">Safe Conditions</p>
+                        <p class="selector_button" data-category="ghs_pictogram">GHS Pictogram</p>                    
+                    </div>
+                    <div class="right_selector_panel">
+                        <div class="image_panel" data-category="sign_template">
+                                <div class="category_row">
+                                <p class="selector_header">OSHA</p>
+                                <p class="selector_header">ANSI</p>
+                                <p class="selector_header">USACE</p>
+                            </div>
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/danger_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/danger_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/danger_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/caution.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/warning_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/warning_usace.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/warning_osha.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution_ansi.jfif" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="ansi_usace" src="icons/caution_usace.jfif" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/safety.jfif" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img class="category_selector" onclick="setPictogram(this)" data-category="osha" src="icons/notice.jfif" alt="">
+                        </div>
+                        <div class="image_panel" data-category="ghs_pictogram">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame and circle.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/flame.jfif" alt="">    
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exploding_bomb.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/exclamation_mark.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/environment.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/corrosion.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/skull and crossbone.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/health_hazard.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/gas_cylinder.jfif" alt="">
+                        </div>
+                        <div class="image_panel" data-category="mandatory">                            
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/boots.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_piece.jfif" alt="">    
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/ear_protection.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/earmuffs.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/facemask.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/full_protection.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/general_ppe.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/general_ppe_1.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/gloves.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hardhat.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hardhat_visor.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/harness.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hazard_mask.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/hazmat.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/mask.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/sharp_protection.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/suit.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/vest.jfif" alt="">
+                            <img onclick="setSymbol(this)" src="icons/Symbols/ppe/visor.jfif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_column">
+                <div id="sign">
+                    <img id="editorPictogram" src="" alt="No Image Selected" />
+                    <div class="editor_type">
+                        <div class="ansi_editor">
+                            <div class="symbol_side">
+                                <img id="ansi_symbol" src="" alt="No Symbol Selected">
+                            </div>
+                            
+                            <div class="ansi-vertical-line"></div>
+                            
+                            <div class="text_side">
+                                <p class="signText">Your custom signal word</p>
+                                <p class="signTextSubtitle">Subtitle</p>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor_type">
+                        <div class="osha_editor">
+                            <div class="no_display"></div>
+                            <div class="osha_text_side">
+                                <p class="signText">Your custom signal word</p>
+                                <p class="signTextSubtitle">Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control_parent">
+                    <input type="text" id="inputText" placeholder="Enter Safety Message" />
+                    <input type="text" id="inputTextSubtitle" placeholder="Enter Subtitle" />
+                </div>
+                
+                <div class="editor_control">
+                    <div class="control_parent">
+                        <!-- Font Size Control -->
+                        <div class="font-size-control">
+                            <label for="fontSizeSlider">
+                                <img src="assets/font-solid.svg" alt="Font Size Icon" class="icon" />
+                                Font Size
+                            </label>
+                            <input type="range" id="fontSizeSlider" min="12" max="64" value="20" step="1" />
+                            <span id="fontSizeValue">20px</span>
+                        </div>
+
+                        <!-- Subtitle Font Size Control -->
+                        <div class="font-size-control">
+                            <label for="subFontSizeSlider">
+                                <img src="assets/font-solid.svg" alt="Font Size Icon" class="icon" />
+                                Subtitle Font Size
+                            </label>
+                            <input type="range" id="subFontSizeSlider" min="12" max="44" value="20" step="1" />
+                            <span id="subFontSizeValue">20px</span>
+                        </div>
+                    </div>
+
+                    <div class="control_parent">
+                        <!-- Text Position Control -->
+                        <div class="font-size-control">
+                            <label for="textPositionSlider">
+                                <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
+                                Text Position
+                            </label>
+                            <input type="range" id="textPositionSlider" min="-20" max="135" value="0" step="1" />
+                            <span id="textPositionValue">0px</span>
+                        </div>
+
+                        <!--Subtitle Text Position Control -->                    
+                        <div class="font-size-control">
+                            <label for="subTextPositionSlider">
+                                <img src="assets/arrows-up-down.svg" alt="Text Position Icon" class="icon" />
+                                Subtitle Position
+                            </label>
+                            <input type="range" id="subTextPositionSlider" min="-20" max="200" value="0" step="1" />
+                            <span id="subTextPositionValue">0px</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download_button">
+                    <img class="download_icon" src="assets/download-solid.svg" alt="">
+                    <span class="button_text" onclick="downloadSign()">Download</span>
+                </div>
+            </div>
+            <div class="editor_spacers"></div>
+        </div>
+
+        <div style="height: 100px;"></div>
+
+        <h1 class="sign_editor_header">Affiliate</h1>
+        <div class="affiliate_section">
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond.jpg" alt="">
+                <p>Connecting Ideas. Building Futures.</p>  
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_academy.jfif" alt="">    
+                <p>Empowering Learners. Shaping Innovators</p>
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_lab.jfif" alt="">    
+                <p>Experiment. Innovate. Transform.</p>
+            </div>
+            <div class="affiliate_icons">
+                <img src="affiliate/mekabond_studio.jfif" alt="">    
+                <p>Turning Ideas into Digital Products</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="top_foot">
+                <p>This website is currently in early release. If you encounter any bugs, please report them to [your@email.com].</p>
+            </div>
+            <div class="footer_icons">
+                <img src="assets/envelope-solid.svg" alt="">
+            </div>
+            <div class="footer_icons">
+                <img src="assets/facebook-brands-solid.svg" alt="">
+            </div>
+            <div class="footer_icons">
+                <img src="assets/phone-solid.svg" alt="">
+            </div>
+            <div class="footer_icons">
+                <img src="assets/square-linkedin-brands-solid-cropped.svg" alt="">
+            </div>
+            <p>Disclaimer:</p>
+            <p>The resources, templates, and materials provided on HARDHATHQ are intended for general guidance and educational purposes only. While every effort has been made to ensure their accuracy and relevance, these resources may not address all site-specific or regulatory requirements.</p>
+            <p>Users are responsible for reviewing, customizing, and validating all documents to meet their organization’s policies, local regulations, and project-specific needs. HARDHATHQ and its affiliates assume no liability for any loss, incident, or non-compliance resulting from the direct or indirect use of these resources.</p>
+            <p>For complex or high-risk projects, always consult with qualified safety professionals and relevant authorities.</p>
+            <h1>© 2025 HARDHATHQ. All rights reserved.</h1>
+        </div>
+   </center>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="custom.js"></script>
+
+</html>
